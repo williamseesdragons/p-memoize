@@ -11,7 +11,9 @@ module.exports = (fn, opts) => {
 			throw err;
 		});
 	};
-
+	
+	ret.clear = () => mem.clear(memoized);
+	
 	mimicFn(ret, fn);
 
 	return ret;
